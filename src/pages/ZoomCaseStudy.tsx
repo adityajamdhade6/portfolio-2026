@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { ArrowLeft, ExternalLink, X } from "lucide-react";
+import { ExternalLink, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ZoomCaseStudy = ({ nextProject }: { nextProject?: any }) => {
@@ -11,7 +9,6 @@ const ZoomCaseStudy = ({ nextProject }: { nextProject?: any }) => {
     visible: { opacity: 1, y: 0 },
   };
 
-  // Full-width image sections from Behance
   const behanceImages = [
     "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f8806a232014615.6895c46a6201d.png",
     "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8931cf232014615.6893c00db04c0.png",
@@ -89,46 +86,218 @@ const ZoomCaseStudy = ({ nextProject }: { nextProject?: any }) => {
             </div>
           </div>
 
-        {/* Full-Width Image Gallery - Behance Style */}
-        <div className="space-y-0 -mx-6 sm:-mx-10 md:-mx-12">
-          {behanceImages.slice(1).map((image, index) => (
+          {/* Content */}
+          <motion.section
+            className="mb-20 md:mb-32"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="font-serif text-2xl md:text-3xl mb-8">Project Overview</h2>
+            <div className="space-y-8">
+              <p className="text-sm md:text-base leading-[1.8] text-muted-foreground font-light max-w-3xl">
+                [Placeholder Text: Write a brief overview of the Zoom for Performing Artists project. What was the goal, who was the target audience, and what was your primary contribution?]
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <p className="text-sm font-medium text-foreground">Timeline</p>
+                  <p className="text-sm leading-[1.8] text-muted-foreground font-light">
+                    [Placeholder Text: 4 weeks]
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-sm font-medium text-foreground">Background</p>
+                  <p className="text-sm leading-[1.8] text-muted-foreground font-light">
+                    [Placeholder Text: Explain the background of the project and why Zoom needed a redesign specifically for performing artists.]
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Research */}
+          <motion.section
+            className="mb-20 md:mb-32"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="font-serif text-2xl md:text-3xl mb-8">Research</h2>
+            <p className="text-sm md:text-base leading-[1.8] text-muted-foreground font-light max-w-3xl mb-12">
+              [Placeholder Text: Describe the research phase of the project here.]
+            </p>
+
             <motion.div
-              key={index}
-              className="w-full"
-              initial={{ opacity: 0, y: 40 }}
+              className="space-y-6 mb-16"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.5 }}
             >
+              <h3 className="text-lg md:text-xl font-medium text-foreground">Qualitative Research</h3>
+              <p className="text-sm md:text-base leading-[1.8] text-muted-foreground font-light max-w-3xl">
+                [Placeholder Text: Explain the qualitative research methods used, such as interviews with performing artists.]
+              </p>
+              <div className="space-y-4 pl-4 border-l-2 border-border">
+                <p className="text-sm font-medium text-foreground/80">Key Questions Asked:</p>
+                <ol className="list-decimal list-inside space-y-2">
+                  <li className="text-sm leading-[1.8] text-muted-foreground font-light">[Placeholder Question 1]</li>
+                  <li className="text-sm leading-[1.8] text-muted-foreground font-light">[Placeholder Question 2]</li>
+                </ol>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="space-y-6 mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <h3 className="text-lg md:text-xl font-medium text-foreground">Research Findings</h3>
+              <p className="text-sm md:text-base leading-[1.8] text-muted-foreground font-light max-w-3xl">
+                [Placeholder Text: Summarize the findings of your research.]
+              </p>
+              <div className="overflow-hidden rounded-sm mt-8">
+                <img
+                  src={behanceImages[1]}
+                  alt="Research"
+                  className="w-full h-auto"
+                />
+              </div>
+            </motion.div>
+          </motion.section>
+
+          {/* Define */}
+          <motion.section
+            className="mb-20 md:mb-32"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="font-serif text-2xl md:text-3xl mb-8">Define</h2>
+            <p className="text-sm md:text-base leading-[1.8] text-muted-foreground font-light max-w-3xl mb-12">
+              [Placeholder Text: Explain how you defined the problem space based on the research.]
+            </p>
+
+            <motion.div
+              className="space-y-6 mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-lg md:text-xl font-medium text-foreground">User Personas & Journey</h3>
+              <p className="text-sm md:text-base leading-[1.8] text-muted-foreground font-light max-w-3xl">
+                [Placeholder Text: Describe the personas you created and their journeys.]
+              </p>
+              <div className="overflow-hidden rounded-sm mt-8">
+                <img
+                  src={behanceImages[2]}
+                  alt="Define"
+                  className="w-full h-auto"
+                />
+              </div>
+            </motion.div>
+          </motion.section>
+
+          {/* Ideate & UI Design */}
+          <motion.section
+            className="mb-20 md:mb-32"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="font-serif text-2xl md:text-3xl mb-8">UI Design & Iterations</h2>
+            <p className="text-sm md:text-base leading-[1.8] text-muted-foreground font-light max-w-3xl mb-12">
+              [Placeholder Text: Explain your design process, wireframes, and final UI decisions.]
+            </p>
+
+            <motion.div
+              className="space-y-6 mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-lg md:text-xl font-medium text-foreground">Wireframes & Flow</h3>
+              <p className="text-sm md:text-base leading-[1.8] text-muted-foreground font-light max-w-3xl">
+                [Placeholder Text: Discuss your wireframes.]
+              </p>
+              <div className="overflow-hidden rounded-sm mt-8">
+                <img
+                  src={behanceImages[3]}
+                  alt="Ideate"
+                  className="w-full h-auto"
+                />
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="space-y-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <h3 className="text-lg md:text-xl font-medium text-foreground">High-Fidelity Screens</h3>
+              <p className="text-sm md:text-base leading-[1.8] text-muted-foreground font-light max-w-3xl">
+                [Placeholder Text: Describe the final high-fidelity screens.]
+              </p>
+              <div className="overflow-hidden rounded-sm mt-8">
+                <img
+                  src={behanceImages[4]}
+                  alt="UI Design"
+                  className="w-full h-auto"
+                />
+              </div>
+            </motion.div>
+          </motion.section>
+
+          {/* Solution & Conclusion */}
+          <motion.section
+            className="mb-20 md:mb-32"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="font-serif text-2xl md:text-3xl mb-8">Solution & Conclusion</h2>
+            <p className="text-sm md:text-base leading-[1.8] text-muted-foreground font-light max-w-3xl mb-10">
+              [Placeholder Text: Summarize the final solution and its impact. What did you learn from this project?]
+            </p>
+            <div className="overflow-hidden rounded-sm">
               <img
-                src={image}
-                alt={`Zoom Case Study Image ${index + 1}`}
+                src={behanceImages[5]}
+                alt="Conclusion"
                 className="w-full h-auto"
               />
-            </motion.div>
-          ))}
-        </div>
+            </div>
+          </motion.section>
 
-        {nextProject && (
-          <section className="border-t border-zinc-200 dark:border-zinc-800 pt-16 mt-16">
-            <Link 
-              to={`/ground/${nextProject.id}`}
-              className="glass-strong group block rounded-[24px] border border-zinc-200 dark:border-zinc-800 p-8 hover:border-zinc-300 dark:hover:border-zinc-700 bg-zinc-50 dark:bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-900/50 transition-all duration-300 relative overflow-hidden"
-            >
-              <div className="absolute right-0 top-0 w-32 h-32 rounded-full blur-[80px] opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity" style={{ background: nextProject.accent }} />
-              
-              <div className="flex flex-col gap-2 relative z-10">
-                <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-zinc-500">Up next</span>
-                <h3 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-white group-hover:translate-x-1 transition-transform inline-flex items-center gap-2">
-                  {nextProject.title}
-                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
-                </h3>
-                <p className="text-xs text-zinc-600 dark:text-zinc-400 font-light mt-0.5">{nextProject.tagline}</p>
-              </div>
-            </Link>
-          </section>
-        )}
-
+          {nextProject && (
+            <section className="border-t border-zinc-200 dark:border-zinc-800 pt-16">
+              <Link 
+                to={`/ground/${nextProject.id}`}
+                className="glass-strong group block rounded-[24px] border border-zinc-200 dark:border-zinc-800 p-8 hover:border-zinc-300 dark:hover:border-zinc-700 bg-zinc-50 dark:bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-900/50 transition-all duration-300 relative overflow-hidden"
+              >
+                <div className="absolute right-0 top-0 w-32 h-32 rounded-full blur-[80px] opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity" style={{ background: nextProject.accent }} />
+                
+                <div className="flex flex-col gap-2 relative z-10">
+                  <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-zinc-500">Up next</span>
+                  <h3 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-white group-hover:translate-x-1 transition-transform inline-flex items-center gap-2">
+                    {nextProject.title}
+                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  </h3>
+                  <p className="text-xs text-zinc-600 dark:text-zinc-400 font-light mt-0.5">{nextProject.tagline}</p>
+                </div>
+              </Link>
+            </section>
+          )}
         </div>
       </motion.div>
     </div>
