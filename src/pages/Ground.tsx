@@ -5,7 +5,7 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 import projectFounderOS from "@/assets/project-founderos-new.png";
 import projectAIAnalyst from "@/assets/project-aianalyst-new.png";
 import projectInstamart from "@/assets/project-instamart-new.png";
-import projectZomatoCase from "@/assets/project-zomatocase-new.png";
+import projectZomatoCase from "@/assets/project-zomato-aov.png";
 import projectInhaus from "@/assets/inhaus-screenshot.png";
 import projectZupper from "@/assets/live-zupper.jpg";
 import projectVantage from "@/assets/project-vantage.png";
@@ -90,14 +90,14 @@ const Ground = () => {
     },
     {
       id: "zomatocase",
-      title: "Zomato User Cohort Analysis",
-      tagline: "UX research and segmentation study targeting high-frequency monthly users",
+      title: "Zomato: Increasing AOV",
+      tagline: "Product strategy and features designed to increase Average Order Value",
       bg: "#ffffff",
-      tags: ["Research", "User Segmentation", "Growth"],
+      tags: ["Product Strategy", "Growth", "UX Research"],
       image: projectZomatoCase,
       bullets: [
-        "Conducted 48 user surveys and 4 interviews, identifying review friction and low perceived value as key adoption barriers.",
-        "Segmented 17M monthly users, prioritizing users with 3+ monthly orders as the highest-impact cohort."
+        "Analyzed user ordering patterns to identify opportunities for increasing Average Order Value (AOV).",
+        "Designed new checkout features and recommendation algorithms to incentivize larger basket sizes."
       ]
     },
     {

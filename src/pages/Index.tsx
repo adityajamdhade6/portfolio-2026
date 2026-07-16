@@ -13,7 +13,7 @@ import projectZupper from "@/assets/live-zupper.jpg";
 import projectInhaus from "@/assets/inhaus-screenshot.png";
 import projectVantage from "@/assets/project-vantage.png";
 import projectInstamart from "@/assets/project-instamart-new.png";
-import projectZomatoCase from "@/assets/project-zomatocase-new.png";
+import projectZomatoCase from "@/assets/project-zomato-aov.png";
 import projectPorter from "@/assets/project-porter-new.png";
 
 
@@ -177,11 +177,11 @@ const Index = ({ activeGhost, onSelectGhost }: IndexProps) => {
     },
     {
       id: "zomatocase",
-      title: "Zomato User Cohorts",
-      tagline: "Customer segmentation and retention strategy",
+      title: "Zomato: Increasing AOV",
+      tagline: "Product strategy and features designed to increase Average Order Value",
       kind: "ground",
       year: "2025",
-      tag: "User Research",
+      tag: "Product Strategy",
       accent: "var(--brand)",
       image: projectZomatoCase,
       link: "/ground/zomatocase",
