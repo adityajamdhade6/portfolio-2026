@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { ReactLenis } from "@studio-freight/react-lenis";
+
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Ground from "./pages/Ground";
@@ -50,19 +50,16 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-
-      <ReactLenis root>
-        <TooltipProvider>
-          <CustomCursor />
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <AnimatedRoutes activeGhost={activeGhost} setActiveGhost={setActiveGhost} />
-            {/* Global Ghost Companion */}
-            <GhostCompanion type={activeGhost} />
-          </BrowserRouter>
-        </TooltipProvider>
-      </ReactLenis>
+      <TooltipProvider>
+        <CustomCursor />
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <AnimatedRoutes activeGhost={activeGhost} setActiveGhost={setActiveGhost} />
+          {/* Global Ghost Companion */}
+          <GhostCompanion type={activeGhost} />
+        </BrowserRouter>
+      </TooltipProvider>
     </QueryClientProvider>
   );
 };
