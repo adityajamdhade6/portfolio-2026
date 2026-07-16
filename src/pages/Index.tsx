@@ -11,10 +11,10 @@ import projectFounderOS from "@/assets/project-founderos-new.png";
 import projectAIAnalyst from "@/assets/project-aianalyst-new.png";
 import projectZupper from "@/assets/live-zupper.jpg";
 import projectInhaus from "@/assets/inhaus-screenshot.png";
-import projectFinancialMarket from "@/assets/iit-financial-market.jpg";
-import projectTennis from "@/assets/project-tennis.png";
-import projectRetro from "@/assets/project-retro.png";
-import projectVelvoria from "@/assets/project-velvoria.png";
+import projectVantage from "@/assets/project-vantage.png";
+import projectInstamart from "@/assets/project-instamart-new.png";
+import projectZomatoCase from "@/assets/project-zomatocase-new.png";
+import projectPorter from "@/assets/project-porter-new.png";
 
 
 
@@ -140,77 +140,76 @@ const Index = ({ activeGhost, onSelectGhost }: IndexProps) => {
       )
     },
     {
-      id: "financial-market",
-      title: "Market Dynamics",
-      tagline: "Linear Algebra & Python interbank stress shock propagation simulation",
+      id: "vantage",
+      title: "Vantage AI",
+      tagline: "Enterprise AI go-to-market strategy for manufacturing",
       kind: "ground",
       year: "2025",
-      tag: "Data Capstone",
+      tag: "Enterprise AI",
       accent: "var(--brand)",
-      image: projectFinancialMarket,
-      link: "/ground/financial-market",
-      bg: "#1C0A0A",
+      image: projectVantage,
+      link: "/ground/vantage",
+      bg: "#ffffff",
       icon: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <line x1="18" y1="20" x2="18" y2="10"/>
-          <line x1="12" y1="20" x2="12" y2="4"/>
-          <line x1="6" y1="20" x2="6" y2="14"/>
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
         </svg>
       )
     },
     {
-      id: "city-open",
-      title: "City Open Tennis",
-      tagline: "Vibrant and high-contrast sports event promotion poster design",
-      kind: "play",
+      id: "instamart",
+      title: "Swiggy Instamart",
+      tagline: "UX research and contextual checkout recommendations",
+      kind: "ground",
+      year: "2025",
+      tag: "UX Research",
+      accent: "var(--brand)",
+      image: projectInstamart,
+      link: "/ground/instamart",
+      bg: "#ffffff",
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+      )
+    },
+    {
+      id: "zomatocase",
+      title: "Zomato User Cohorts",
+      tagline: "Customer segmentation and retention strategy",
+      kind: "ground",
+      year: "2025",
+      tag: "User Research",
+      accent: "var(--brand)",
+      image: projectZomatoCase,
+      link: "/ground/zomatocase",
+      bg: "#ffffff",
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      )
+    },
+    {
+      id: "porter",
+      title: "Porter Optimization",
+      tagline: "ML-driven demand positioning optimizing driver earnings",
+      kind: "ground",
       year: "2024",
-      tag: "Poster Design",
-      accent: "var(--accent)",
-      image: projectTennis,
-      link: "/play",
-      bg: "#0B1D33",
+      tag: "Product Ops",
+      accent: "var(--brand)",
+      image: projectPorter,
+      link: "/ground/porter",
+      bg: "#fec42e",
       icon: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="12" r="10"/>
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-        </svg>
-      )
-    },
-    {
-      id: "retro-rides",
-      title: "Retro Rides",
-      tagline: "Vintage advertising poster inspired by 90s American retro aesthetics",
-      kind: "play",
-      year: "2024",
-      tag: "Retro Design",
-      accent: "var(--accent)",
-      image: projectRetro,
-      link: "/play",
-      bg: "#2A251B",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
-          <line x1="1" y1="10" x2="23" y2="10"/>
-        </svg>
-      )
-    },
-    {
-      id: "velvoria",
-      title: "Velvoria Cupcake",
-      tagline: "Premium food product advertising poster highlighting consumer indulgence",
-      kind: "play",
-      year: "2024",
-      tag: "Food Ad",
-      accent: "var(--accent)",
-      image: projectVelvoria,
-      link: "/play",
-      bg: "#331E2A",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-          <line x1="9" y1="9" x2="9.01" y2="9"/>
-          <line x1="15" y1="9" x2="15.01" y2="9"/>
+          <polyline points="12 6 12 12 16 14"/>
         </svg>
       )
     }
