@@ -13,7 +13,12 @@ const ZoomCaseStudy = ({ nextProject }: { nextProject?: any }) => {
 
   // Full-width image sections from Behance
   const behanceImages = [
-    "https://mir-s3-cdn-cf.behance.net/project_modules/1400/615710232014615.6999763181ee8.png",
+    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f8806a232014615.6895c46a6201d.png",
+    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8931cf232014615.6893c00db04c0.png",
+    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/735e10232014615.6895285140348.png",
+    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8cf4c5232014615.6893c00dafc07.png",
+    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/c390d1232014615.6895d18518466.png",
+    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/3fe2a6232014615.6895a46f1b401.png",
   ];
 
   useEffect(() => {
@@ -73,12 +78,12 @@ const ZoomCaseStudy = ({ nextProject }: { nextProject?: any }) => {
               <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">Links</p>
               <div className="flex flex-wrap gap-2">
                 <a
-                  href="https://www.figma.com/design/S2Zal6RMMfnUr86rHdnSNC/Zoom---Case-Study?node-id=233-2858&m=dev"
+                  href="https://www.behance.net/gallery/232014615/Zoom-for-Performing-Artists"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="meta-value underline underline-offset-4 hover:text-foreground transition-colors inline-flex items-center gap-1"
                 >
-                  Figma File <ExternalLink size={10} />
+                  Behance Project <ExternalLink size={10} />
                 </a>
               </div>
             </div>
@@ -86,7 +91,7 @@ const ZoomCaseStudy = ({ nextProject }: { nextProject?: any }) => {
 
         {/* Full-Width Image Gallery - Behance Style */}
         <div className="space-y-0 -mx-6 sm:-mx-10 md:-mx-12">
-          {behanceImages.map((image, index) => (
+          {behanceImages.slice(1).map((image, index) => (
             <motion.div
               key={index}
               className="w-full"
