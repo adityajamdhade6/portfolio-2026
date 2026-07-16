@@ -52,12 +52,22 @@ const App = () => {
   // Premium Smooth Scrolling (Vanilla Lenis is much safer than the React wrapper)
   useEffect(() => {
     const lenis = new Lenis({
-      autoRaf: true,
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       touchMultiplier: 2,
     });
-    return () => lenis.destroy();
+    
+    let rafId: number;
+    function raf(time: number) {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    }
+    rafId = requestAnimationFrame(raf);
+    
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
   }, []);
 
   return (

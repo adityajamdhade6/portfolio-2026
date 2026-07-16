@@ -18,6 +18,13 @@ const GroundCaseStudy = () => {
   const navigate = useNavigate();
   const project = projectDetails[projectId || ""];
 
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
+
   if (!project) {
     return (
       <div className="fixed inset-0 z-[100] bg-[#02040a] text-white flex flex-col items-center justify-center p-6 overflow-y-auto">
@@ -41,12 +48,6 @@ const GroundCaseStudy = () => {
   const nextKey = allKeys[(currentIndex + 1) % allKeys.length];
   const nextProject = projectDetails[nextKey];
 
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, []);
 
   if (project.id === "nurture") {
     return <CaseStudy nextProject={nextProject} />;
