@@ -11,7 +11,6 @@ import {
   StreamverseEtlView
 } from "@/components/CapstoneViews";
 import CaseStudy from "./CaseStudy";
-import ZoomCaseStudy from "./ZoomCaseStudy";
 
 const GroundCaseStudy = () => {
   const { projectId } = useParams<{ projectId: string }>();
@@ -51,10 +50,6 @@ const GroundCaseStudy = () => {
 
   if (project.id === "nurture") {
     return <CaseStudy nextProject={nextProject} />;
-  }
-
-  if (project.id === "zoom") {
-    return <ZoomCaseStudy nextProject={nextProject} />;
   }
 
   return (

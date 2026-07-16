@@ -14,7 +14,6 @@ import GroundCaseStudy from "./pages/GroundCaseStudy";
 import Play from "./pages/Play";
 import Contact from "./pages/Contact";
 import CaseStudy from "./pages/CaseStudy";
-import ZoomCaseStudy from "./pages/ZoomCaseStudy";
 import NotFound from "./pages/NotFound";
 import { GhostCompanion, GhostType } from "@/components/GhostCompanion";
 import { CustomCursor } from "@/components/CustomCursor";
@@ -34,7 +33,6 @@ const AnimatedRoutes = ({ activeGhost, setActiveGhost }: { activeGhost: GhostTyp
         <Route path="/ground" element={<Ground />}>
           <Route path=":projectId" element={<GroundCaseStudy />} />
           <Route path="nurture" element={<CaseStudy />} />
-          <Route path="zoom" element={<ZoomCaseStudy />} />
         </Route>
         <Route path="/play" element={<Play />} />
         <Route path="/about" element={<About />} />

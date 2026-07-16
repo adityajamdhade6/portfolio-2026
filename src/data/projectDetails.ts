@@ -693,21 +693,5 @@ export const projectDetails: Record<string, ProjectDetail> = {
     problemStatement: "",
     solutionStatement: "",
     screens: []
-  },
-  "zoom": {
-    id: "zoom",
-    title: "Zoom for Performing Artists",
-    subtitle: "Website Redesign and Development",
-    tagline: "A digital stage for performing artists.",
-    role: "UI/UX Designer",
-    client: "Academic Project",
-    timeline: "4 Weeks",
-    accent: "#3b82f6",
-    bg: "#ffffff",
-    image: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f8806a232014615.6895c46a6201d.png",
-    writeup: [],
-    problemStatement: "",
-    solutionStatement: "",
-    screens: []
   }
 };
