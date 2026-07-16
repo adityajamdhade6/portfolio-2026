@@ -427,14 +427,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     ],
     problemStatement: "B2B retailers and MSMEs in India face friction when sourcing lifestyle products due to complex bulk pricing structures, lack of transparent credit availability (BNPL), and fragmented order management channels.",
     solutionStatement: "Designed a unified mobile marketplace that integrates bulk auction bidding, dynamic Buy Now Pay Later (BNPL) credit limits, and simplified onboarding tailored for non-tech-savvy shop owners.",
-    screens: [
-      {
-        src: projectZupperPhones,
-        title: "B2B Marketplace & Storefront",
-        problem: "Traditional wholesale sourcing requires retailers to navigate confusing spreadsheets or deal with brokers, with zero visibility into customized bulk discount tiers.",
-        rationale: "Created a clean, card-based interface displaying live auctions, dynamic volume discount ladders (Store+), and personalized credit limit badges (BNPL) to make sourcing as seamless as consumer e-commerce."
-      }
-    ],
+    screens: [],
     duration: "3 Months",
     type: "Mobile Design",
     industry: "B2B e-commerce",
