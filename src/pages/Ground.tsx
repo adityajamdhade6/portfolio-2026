@@ -429,18 +429,14 @@ const Ground = () => {
                       src={proj.video} 
                       poster={proj.image}
                       autoPlay loop muted playsInline 
-                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" 
+                      className="absolute inset-0 h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-[1.03]" 
                     />
                   ) : (
                     <img 
                       src={proj.image} 
                       alt={proj.title} 
                       loading="lazy" 
-                      className={`absolute inset-0 h-full w-full ${
-                        ['vantage', 'zomatocase', 'zomato-text-reviews', 'porter', 'instamart', 'aianalyst', 'founderos', 'inhaus', 'nurture'].includes(proj.id) 
-                          ? 'object-contain p-3' 
-                          : 'object-cover'
-                      } transition-transform duration-500 group-hover:scale-[1.03]`} 
+                      className="absolute inset-0 h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-[1.03]" 
                     />
                   )}
 

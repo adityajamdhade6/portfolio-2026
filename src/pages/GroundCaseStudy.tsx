@@ -64,9 +64,9 @@ const GroundCaseStudy = () => {
         {/* Top Image Section */}
         <div className="relative aspect-[16/10] w-full bg-zinc-200 dark:bg-zinc-900">
           {project.video ? (
-            <video src={project.video} poster={project.image} autoPlay loop muted playsInline className="h-full w-full object-cover" />
+            <video src={project.video} poster={project.image} autoPlay loop muted playsInline className="h-full w-full object-contain p-2 md:p-6" />
           ) : (
-            <img src={project.image} alt={project.title} className="h-full w-full object-cover" />
+            <img src={project.image} alt={project.title} className="h-full w-full object-contain p-2 md:p-6" />
           )}
           
           {/* Top Left Pill */}
@@ -260,7 +260,7 @@ const GroundCaseStudy = () => {
                           <img
                             src={screen.src}
                             alt={screen.title}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                             loading="lazy"
                           />
                           <span className="pointer-events-none absolute inset-0 rounded-[22px] ring-1 ring-inset ring-black/10 dark:ring-white/10" />

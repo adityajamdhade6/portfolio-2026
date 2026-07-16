@@ -374,7 +374,7 @@ const Index = ({ activeGhost, onSelectGhost }: IndexProps) => {
             {projects.map((proj) => (
               <article key={proj.id} className="flex flex-col gap-4">
                 <Link to={proj.link} className="relative aspect-video w-full overflow-hidden rounded-[18px] outline-none">
-                  <img src={proj.image} alt={proj.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover hover:scale-105 transition-transform duration-500" />
+                  <img src={proj.image} alt={proj.title} loading="lazy" className="absolute inset-0 h-full w-full object-contain p-2 hover:scale-105 transition-transform duration-500" />
                   <span className="pointer-events-none absolute inset-0 rounded-[18px] ring-1 ring-inset ring-white/10" />
                 </Link>
                 <div>
@@ -469,13 +469,13 @@ const Index = ({ activeGhost, onSelectGhost }: IndexProps) => {
                             loop 
                             muted 
                             playsInline 
-                            className="absolute inset-0 h-full w-full object-cover hover:scale-[1.02] transition-transform duration-700" 
+                            className="absolute inset-0 h-full w-full object-contain p-2 hover:scale-[1.02] transition-transform duration-700" 
                           />
                         ) : (
                           <img 
                              src={proj.image} 
                              alt={proj.title} 
-                             className={`absolute inset-0 h-full w-full ${['founderos', 'aianalyst', 'inhaus'].includes(proj.id) ? 'object-contain p-2' : 'object-cover'} hover:scale-[1.02] transition-transform duration-700`} 
+                             className="absolute inset-0 h-full w-full object-contain p-2 hover:scale-[1.02] transition-transform duration-700" 
                           />
                         )}
                         <Link 

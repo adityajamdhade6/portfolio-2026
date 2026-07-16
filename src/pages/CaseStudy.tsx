@@ -29,7 +29,7 @@ const CaseStudy = ({ nextProject }: { nextProject?: any }) => {
       >
         {/* Top Image Section */}
         <div className="relative aspect-[16/10] w-full bg-zinc-200 dark:bg-zinc-900">
-          <img src="https://framerusercontent.com/images/0RKQNlUmdUNZZYuxu16clCX0vQ.png" alt="Nurture App Hero" className="h-full w-full object-cover" />
+          <img src="https://framerusercontent.com/images/0RKQNlUmdUNZZYuxu16clCX0vQ.png" alt="Nurture App Hero" className="h-full w-full object-contain p-2 md:p-6" />
           
           {/* Top Left Pill */}
           <div className="absolute left-4 top-4 z-10 sm:left-6 sm:top-6">
