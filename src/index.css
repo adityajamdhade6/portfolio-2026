@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Hemang-inspired light palette */
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --brand: #3D5AFE;        /* Hemang's exact indigo-blue */
+    --accent: #F97316;       /* warm orange-peach accent */
+    --ink: #0f172a;
+    --ink-base: rgba(15, 23, 42, 0.65);
+    --ink-soft: rgba(15, 23, 42, 0.45);
+    --ink-mute: rgba(15, 23, 42, 0.3);
+    --ink-faint: rgba(15, 23, 42, 0.18);
+    --line: rgba(15, 23, 42, 0.08);
+    --line-strong: rgba(15, 23, 42, 0.14);
+    --tag-bg: rgba(15, 23, 42, 0.04);
+    --tag-border: rgba(15, 23, 42, 0.08);
+    --soft-blue: rgba(61, 90, 254, 0.04);
+
+    --radius: 20px;
+    --radius-2xl: 28px;
+
+    --border: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+  }
+
+  /* Ground / dark pages use the "dim" palette */
+  .dim {
+    --background: #09090f;
+    --foreground: #f1f5f9;
+    --brand: #3D5AFE;
+    --accent: #F97316;
+    --ink: #f1f5f9;
+    --ink-base: rgba(241, 245, 249, 0.7);
+    --ink-soft: rgba(241, 245, 249, 0.45);
+    --ink-mute: rgba(241, 245, 249, 0.28);
+    --ink-faint: rgba(241, 245, 249, 0.14);
+    --line: rgba(255, 255, 255, 0.07);
+    --line-strong: rgba(255, 255, 255, 0.13);
+    --tag-bg: rgba(255, 255, 255, 0.05);
+    --tag-border: rgba(255, 255, 255, 0.09);
+    --soft-blue: rgba(61, 90, 254, 0.12);
+  }
+
+  .dark {
+    --background: #09090f;
+    --foreground: #f1f5f9;
+    --brand: #3D5AFE;
+    --accent: #F97316;
+    --ink: #f1f5f9;
+    --ink-base: rgba(241, 245, 249, 0.7);
+    --ink-soft: rgba(241, 245, 249, 0.45);
+    --ink-mute: rgba(241, 245, 249, 0.28);
+    --ink-faint: rgba(241, 245, 249, 0.14);
+    --line: rgba(255, 255, 255, 0.07);
+    --line-strong: rgba(255, 255, 255, 0.13);
+    --tag-bg: rgba(255, 255, 255, 0.05);
+    --tag-border: rgba(255, 255, 255, 0.09);
+    --soft-blue: rgba(61, 90, 254, 0.12);
+
+    --border: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] antialiased min-h-screen flex flex-col;
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  /* ─── Dotted Grid Background ────────────────────────── */
+  .dotted-grid {
+    background-image: radial-gradient(circle, rgba(15, 23, 42, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: center;
+  }
+
+  .dim .dotted-grid,
+  .dark .dotted-grid {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  }
+
+  /* ─── Glassmorphism ─────────────────────────────────── */
+  .glass {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(14px) saturate(1.4);
+    -webkit-backdrop-filter: blur(14px) saturate(1.4);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 16px -4px rgba(15, 23, 42, 0.06);
+    transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .dim .glass,
+  .dark .glass {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px -4px rgba(0, 0, 0, 0.4);
+  }
+
+  .glass-strong {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04), 0 12px 32px -12px rgba(15, 23, 42, 0.08);
+    transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .dim .glass-strong,
+  .dark .glass-strong {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 12px 32px -12px rgba(0, 0, 0, 0.6);
+  }
+
+  /* ─── Scroll Marquee ────────────────────────────────── */
+  .scroll-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+  }
+
+  .scroll-marquee-track {
+    display: inline-flex;
+    animation: marquee 28s linear infinite;
+    min-width: 200%;
+    gap: 0;
+  }
+
+  .scroll-marquee:hover .scroll-marquee-track {
+    animation-play-state: paused;
+  }
+
+  /* ─── Text Gradients ────────────────────────────────── */
+  .brand-gradient-text {
+    background: linear-gradient(120deg, var(--brand) 0%, #818cf8 50%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ─── Serif Italic Accent ───────────────────────────── */
+  .serif-italic {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  /* ─── Hero Word Letter Animation ────────────────────── */
+  .hero-word {
+    font-weight: 700;
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+  }
+
+  .letter {
+    display: inline-block;
+    transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: riseUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--letter-delay, 0s);
+  }
+
+  .letter:hover {
+    transform: translateY(-6px) scale(1.04);
+  }
+
+  /* ─── Interactive play/ground link underlines ───────── */
+  .play-link {
+    position: relative;
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+    font-weight: 800;
+    color: var(--ink);
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .play-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    height: 10px;
+    background-color: #a78bfa;
+    opacity: 0.55;
+    z-index: -1;
+    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: bottom;
+  }
+
+  .play-link:hover::after {
+    transform: scaleY(1.7);
+    opacity: 0.7;
+  }
+
+  .ground-link {
+    position: relative;
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+    font-weight: 800;
+    color: var(--ink);
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .ground-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    height: 10px;
+    background-color: var(--brand);
+    opacity: 0.45;
+    z-index: -1;
+    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: bottom;
+  }
+
+  .ground-link:hover::after {
+    transform: scaleY(1.7);
+    opacity: 0.65;
+  }
+
+  /* ─── Rise-in scroll animation ──────────────────────── */
+  .rise-in {
+    opacity: 0;
+    transform: translateY(22px);
+    animation: riseIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--rise-delay, 0ms);
+  }
+
+  /* Use IntersectionObserver-driven class instead in React — this targets elements already in view on load */
+  @media (prefers-reduced-motion: no-preference) {
+    .rise-in-view {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .rise-in-view.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ─── Live dot pulse ────────────────────────────────── */
+  .live-dot {
+    animation: livePulse 2s ease-in-out infinite;
+  }
+
+  /* ─── Back link style ───────────────────────────────── */
+  .back-link {
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+
+  .back-link:hover {
+    color: var(--ink);
+    opacity: 0.85;
+  }
+
+  /* ─── Meta labels (for case study pages) ───────────── */
+  .meta-label {
+    font-family: 'Hanken Grotesk', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .meta-value {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--foreground);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ─── Ghost scroll companion ────────────────────────── */
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(6px); }
+  }
+
+  @keyframes ghostFloat {
+    0%, 100% { transform: translateY(0px) rotate(-1deg); }
+    50%       { transform: translateY(-8px) rotate(1deg); }
+  }
+
+  .ghost-hint-bob {
+    animation: bob 3s ease-in-out infinite;
+  }
+
+  .ghost-accessory-float {
+    animation: bob 3.2s ease-in-out infinite;
+  }
+}
+
+/* ─── Keyframes ─────────────────────────────────────────── */
+@keyframes riseUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ghostHint {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(0.85); }
+}
