@@ -58,7 +58,7 @@ const GroundCaseStudy = () => {
   }
 
   return (
-    <div className="fixed inset-0 z-[100] flex flex-col items-center overflow-y-auto bg-black/60 p-4 sm:p-8 md:p-12 backdrop-blur-sm">
+    <div data-lenis-prevent="true" className="fixed inset-0 z-[100] flex flex-col items-center overflow-y-auto bg-black/60 p-4 sm:p-8 md:p-12 backdrop-blur-sm">
       <motion.div
         className="relative mx-auto w-full max-w-[840px] shrink-0 overflow-hidden rounded-[24px] sm:rounded-[32px] bg-[#f8f9fa] text-zinc-900 shadow-2xl ring-1 ring-black/5 dark:bg-[#02040a] dark:text-zinc-100 dark:ring-white/10 mb-12"
         initial={{ y: 50, opacity: 0 }}
