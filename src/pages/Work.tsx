@@ -119,7 +119,7 @@ const Work = () => {
                             <img
                               src={project.image}
                               alt={project.title}
-                              className="w-full h-48 md:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                              className="w-full h-auto object-contain bg-zinc-900 transition-transform duration-500 group-hover:scale-105"
                             />
                           </div>
                           <div className="p-4 space-y-2">
@@ -141,7 +141,7 @@ const Work = () => {
                           <img
                             src={project.image}
                             alt={project.title}
-                            className="w-full h-48 md:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                            className="w-full h-auto object-contain bg-zinc-900 transition-transform duration-500 group-hover:scale-105"
                           />
                         </div>
                         <div className="p-4 space-y-2">

@@ -304,7 +304,7 @@ const Play = () => {
                 className={`group relative flex flex-col ${index % 2 === 1 ? 'md:mt-24' : ''}`}
               >
                 <div 
-                  className="relative aspect-square w-full overflow-hidden rounded-[24px] border border-zinc-800 transition-all duration-500 cursor-zoom-in"
+                  className="relative w-full overflow-hidden rounded-[24px] border border-zinc-800 transition-all duration-500 cursor-zoom-in"
                   style={{ backgroundColor: project.bg }}
                   onClick={() => setSelectedImage(project.image)}
                 >
@@ -316,10 +316,10 @@ const Play = () => {
                       loop 
                       muted 
                       playsInline 
-                      className="absolute inset-0 h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-500" 
+                      className="block w-full h-auto group-hover:scale-[1.02] transition-transform duration-500" 
                     />
                   ) : (
-                    <img src={project.image} alt={project.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-500" />
+                    <img src={project.image} alt={project.title} loading="lazy" className="block w-full h-auto group-hover:scale-[1.02] transition-transform duration-500" />
                   )}
                   <span className="pointer-events-none absolute inset-0 rounded-[24px] ring-1 ring-inset ring-white/10" />
                 </div>
