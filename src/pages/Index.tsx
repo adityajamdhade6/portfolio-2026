@@ -237,7 +237,7 @@ const Index = ({ activeGhost, onSelectGhost }: IndexProps) => {
               Available for work · {new Date().getFullYear()}
             </p>
 
-            <h1 className="relative z-20 text-center font-sans font-extrabold text-[clamp(4rem,15vw,14rem)] leading-[0.85] tracking-[-0.04em] text-[var(--ink)]">
+            <h1 className="relative z-20 text-center font-sans font-extrabold text-[clamp(2.6rem,13.5vw,11rem)] leading-[0.85] tracking-[-0.04em] text-[var(--ink)]">
               <span aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[140%] w-[120%] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-white/40 blur-2xl dark:bg-black/20" />
               
               {/* Aditya's letter-by-letter animations */}
