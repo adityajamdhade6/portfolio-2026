@@ -625,7 +625,7 @@ const Index = ({ activeGhost, onSelectGhost }: IndexProps) => {
                   transition: { staggerChildren: 0.1, delayChildren: 0.05 }
                 }
               }}
-              className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+              className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
             >
               
               {/* Card 1: INHAUS Coffee */}
