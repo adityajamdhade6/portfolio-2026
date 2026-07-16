@@ -183,24 +183,7 @@ const About = () => {
                 </div>
               </section>
 
-              {/* Positions of Responsibility */}
-              <section>
-                <h2 className="font-mono text-[11px] uppercase tracking-[0.25em] text-[var(--ink-soft)] border-b border-[var(--line)] pb-2 mb-4">
-                  Positions of Responsibility
-                </h2>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex items-baseline justify-between">
-                      <h4 className="text-sm font-semibold text-[var(--ink)]">IITJ Club</h4>
-                      <span className="font-mono text-[9px] text-[var(--ink-mute)]">Sep 2025 - Present</span>
-                    </div>
-                    <ul className="mt-2 space-y-1.5 pl-4 list-disc text-xs text-[var(--ink-base)] font-light">
-                      <li>Set up anonymous feedback system collecting 120+ responses, analyzed using Python (Pandas, NLTK).</li>
-                      <li>Reduced counseling wait times from 12 to 4 days by connecting 18 students with services and improving case prioritization.</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
+
             </div>
 
             {/* Right Column: Education & Skills */}

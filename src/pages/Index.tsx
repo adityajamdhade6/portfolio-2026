@@ -760,49 +760,7 @@ const Index = ({ activeGhost, onSelectGhost }: IndexProps) => {
                 </div>
               </motion.a>
 
-              {/* Card 4: IITJ Counseling Portal */}
-              <motion.a 
-                variants={{
-                  hidden: { opacity: 0, y: 25 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
-                }}
-                href="https://counsel.iitj.ac.in" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="glass-strong group relative flex h-full flex-col overflow-hidden rounded-[22px] border border-black/5 hover:-translate-y-1 transition-all duration-300 bg-white dark:bg-zinc-900"
-                style={{ boxShadow: "0 1px 0 rgba(255,255,255,0.9) inset, 0 18px 40px -22px rgba(15,23,42,0.1)" }}
-              >
-                <div className="relative h-40 overflow-hidden border-b border-black/5 bg-white sm:h-44">
-                  <div className="absolute inset-x-0 top-0 z-20 flex items-center gap-2 border-b border-black/5 bg-white/85 px-3 py-2 backdrop-blur-md dark:bg-zinc-950/80">
-                    <span className="flex gap-1.5">
-                      <span className="h-1.5 w-1.5 rounded-full bg-black/10 dark:bg-white/20"></span>
-                      <span className="h-1.5 w-1.5 rounded-full bg-black/10 dark:bg-white/20"></span>
-                      <span className="h-1.5 w-1.5 rounded-full bg-black/10 dark:bg-white/20"></span>
-                    </span>
-                    <span className="ml-1 truncate font-mono text-[9px] text-zinc-500">counsel.iitj.ac.in</span>
-                  </div>
-                  <iframe src="https://iitj.ac.in/" title="IITJ Counseling Portal Live Preview" className="absolute inset-x-0 bottom-0 top-[34px] h-[calc(100%-34px)] w-full border-none pointer-events-none" />
-                  <span className="pointer-events-none absolute right-3 top-[42px] z-20 inline-flex items-center gap-1.5 rounded-full border border-black/5 bg-white/95 px-2 py-0.5 font-mono text-[8px] font-medium uppercase tracking-[0.2em] text-zinc-650 backdrop-blur-md dark:bg-zinc-900 dark:text-zinc-300">
-                    <span className="h-1 w-1 rounded-full bg-emerald-500"></span>live
-                  </span>
-                </div>
-                <div className="flex flex-1 flex-col gap-3 p-5">
-                  <div>
-                    <h3 className="text-[16px] font-semibold leading-tight tracking-tight text-[var(--ink)]">IITJ Support Portal</h3>
-                    <p className="mt-0.5 text-[11px] font-medium text-zinc-500">NLP Student Hotline · Lead</p>
-                  </div>
-                  <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-zinc-400 mt-1">Student support portal, priority sorting scripts</p>
-                  <div className="mt-auto flex items-center justify-between gap-3 pt-4 border-t border-zinc-100 dark:border-zinc-800">
-                     <span className="truncate font-mono text-[9px] text-zinc-400">counsel.iitj.ac.in</span>
-                     <span className="inline-flex items-center gap-1 rounded-full bg-black dark:bg-zinc-800 px-3 py-1 text-[9px] font-semibold text-white transition-transform group-hover:scale-[1.03]">
-                       Visit
-                       <svg width="8" height="8" viewBox="0 0 12 12" fill="none">
-                         <path d="M3 9 L9 3 M9 3 L4.5 3 M9 3 L9 7.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"></path>
-                       </svg>
-                     </span>
-                  </div>
-                </div>
-              </motion.a>
+
 
             </motion.div>
           </div>
