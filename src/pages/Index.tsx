@@ -322,7 +322,7 @@ const Index = ({ activeGhost, onSelectGhost }: IndexProps) => {
               Choose a ghost helper. They will dock at the bottom-left and guide you across the portfolio. Click to wake them up, or double-click to hide them.
             </p>
 
-            <div className="mx-auto mt-10 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-6 sm:gap-4">
+            <div className="mx-auto mt-10 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 sm:gap-4">
               {ghostGuides.map((ghost) => {
                 const isSelected = activeGhost === ghost.id;
                 return (
@@ -362,7 +362,7 @@ const Index = ({ activeGhost, onSelectGhost }: IndexProps) => {
         </section>
 
         {/* Responsive Showcase - Mobile Stack View */}
-        <section className="md:hidden flex flex-col gap-12 px-6 py-12 bg-white dark:bg-zinc-950">
+        <section className="xl:hidden flex flex-col gap-12 px-6 py-12 bg-white dark:bg-zinc-950">
           <div className="flex flex-col gap-2">
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--ink-soft)]">
               Selected works
@@ -395,7 +395,7 @@ const Index = ({ activeGhost, onSelectGhost }: IndexProps) => {
         </section>
 
         {/* Desktop horizontal scroll showcase */}
-        <section ref={containerRef} className="relative hidden md:block w-full h-[600vh] bg-[var(--background)] border-t border-[var(--line)]">
+        <section ref={containerRef} className="relative hidden xl:block w-full h-[600vh] bg-[var(--background)] border-t border-[var(--line)]">
           <div className="sticky top-0 h-screen w-full overflow-hidden">
             
             {/* INTERACTIVE FLOATING NAVIGATION DOTS BAR (MATCHES REFERENCE EXACTLY) */}

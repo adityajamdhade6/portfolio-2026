@@ -19,7 +19,7 @@ const CaseStudy = ({ nextProject }: { nextProject?: any }) => {
   }, []);
 
   return (
-    <div data-lenis-prevent="true" className="fixed inset-0 z-[100] flex flex-col items-center overflow-y-auto bg-black/60 p-4 sm:p-8 md:p-12 backdrop-blur-sm">
+    <div data-lenis-prevent="true" className="fixed inset-0 z-[100] flex flex-col items-center overflow-y-auto bg-black/60 p-2 sm:p-6 md:p-12 backdrop-blur-sm">
       <motion.div
         className="relative mx-auto w-full max-w-[840px] shrink-0 overflow-hidden rounded-[24px] sm:rounded-[32px] bg-white text-zinc-900 shadow-2xl ring-1 ring-black/5 dark:bg-[#02040a] dark:text-zinc-100 dark:ring-white/10 mb-12"
         initial={{ y: 50, opacity: 0 }}
@@ -40,14 +40,14 @@ const CaseStudy = ({ nextProject }: { nextProject?: any }) => {
           </div>
 
           {/* Top Right Close */}
-          <Link to="/ground" className="absolute right-4 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-black/60 sm:right-6 sm:top-6 sm:h-10 sm:w-10">
-            <X size={18} />
+          <Link to="/ground" className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-black/60 sm:right-6 sm:top-6">
+            <X size={20} />
           </Link>
         </div>
 
         {/* Content Section */}
-        <div className="p-6 sm:p-10 md:p-12">
-          <h1 className="mb-2 text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
+        <div className="p-5 sm:p-10 md:p-12">
+          <h1 className="mb-2 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
             Nurture : A Plant Care Companion
           </h1>
           <p className="mb-8 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400 sm:text-base font-light">

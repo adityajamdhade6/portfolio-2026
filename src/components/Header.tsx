@@ -103,10 +103,10 @@ const Header = () => {
             </span>
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[var(--foreground)] p-2 hover:opacity-70 transition-opacity"
+              className="text-[var(--foreground)] p-4 hover:opacity-70 transition-opacity -mr-2"
               aria-label="Close menu"
             >
-              <X size={20} strokeWidth={1.5} />
+              <X size={24} strokeWidth={1.5} />
             </button>
           </div>
 
@@ -121,7 +121,7 @@ const Header = () => {
               <Link
                 key={to}
                 to={to}
-                className={`text-[2rem] font-semibold tracking-tight transition-opacity hover:opacity-60 ${
+                className={`text-3xl sm:text-4xl font-semibold tracking-tight transition-opacity hover:opacity-60 ${
                   isActive(to) ? "text-[var(--brand)]" : "text-[var(--foreground)]"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
