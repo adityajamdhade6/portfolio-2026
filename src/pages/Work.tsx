@@ -23,14 +23,7 @@ const Work = () => {
       category: "PLANT WELLNESS APP DESIGN",
       image: "https://framerusercontent.com/images/0RKQNlUmdUNZZYuxu16clCX0vQ.png",
       link: "/case-study",
-    },
-    {
-      id: "zoom",
-      title: "ZOOM FOR PERFORMING ARTISTS",
-      category: "PRODUCT DESIGN",
-      image: "https://framerusercontent.com/images/4A2Y65LxTugFS6bp9MNATdQLD0I.png",
-      link: "/case-study/zoom",
-    },
+    }
   ];
 
   const graphicDesign = [

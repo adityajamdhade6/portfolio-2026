@@ -185,18 +185,6 @@ const Ground = () => {
       ]
     },
     {
-      id: "zoom",
-      title: "Zoom for Performing Artists",
-      tagline: "Website redesign and UX strategy tailored for the performing arts community on Zoom",
-      bg: "#0e1c2b",
-      tags: ["UI/UX Design", "Website Redesign", "Figma"],
-      image: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f8806a232014615.6895c46a6201d.png",
-      bullets: [
-        "Redesigned Zoom's product experience for performing artists, including flow optimizations and hi-fi mockups.",
-        "Delivered full case study documentation with Behance-quality visual storytelling across 6 presentation panels."
-      ]
-    },
-    {
       id: "inhaus",
       title: "INHAUS Coffee: Brand Launch & D2C Growth",
       tagline: "Co-founded and scaled D2C coffee brand from 0 to 1",
@@ -449,7 +437,7 @@ const Ground = () => {
                       alt={proj.title} 
                       loading="lazy" 
                       className={`absolute inset-0 h-full w-full ${
-                        ['vantage', 'zomatocase', 'zomato-text-reviews', 'porter', 'instamart', 'aianalyst', 'founderos', 'inhaus', 'nurture', 'zoom'].includes(proj.id) 
+                        ['vantage', 'zomatocase', 'zomato-text-reviews', 'porter', 'instamart', 'aianalyst', 'founderos', 'inhaus', 'nurture'].includes(proj.id) 
                           ? 'object-contain p-3' 
                           : 'object-cover'
                       } transition-transform duration-500 group-hover:scale-[1.03]`} 
