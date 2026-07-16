@@ -4,7 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -47,38 +47,9 @@ const AnimatedRoutes = ({ activeGhost, setActiveGhost }: { activeGhost: GhostTyp
 
 const App = () => {
   const [activeGhost, setActiveGhost] = useState<GhostType>("boo");
-  const [isLoading, setIsLoading] = useState(true);
-
-  // Smooth out initial page load
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500); // 1.5s artificial delay allows heavy images and fonts to parse behind the scenes
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
-      <AnimatePresence>
-        {isLoading && (
-          <motion.div
-            key="global-loader"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="fixed inset-0 z-[99999] flex items-center justify-center bg-[var(--bg)]"
-          >
-            <motion.div
-              initial={{ opacity: 0.5 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
-              className="text-sm font-medium tracking-[0.2em] text-[var(--ink)] uppercase"
-            >
-              Aditya Jamdhade
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       <ReactLenis root>
         <TooltipProvider>
