@@ -38,7 +38,7 @@ const GroundCaseStudy = () => {
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } },
   };
 
   // Find next project for footer redirect
@@ -297,7 +297,7 @@ const GroundCaseStudy = () => {
           <section className="border-t border-zinc-200 dark:border-zinc-800 pt-16">
             <Link 
               to={`/ground/${nextProject.id}`}
-              className="glass-strong group block rounded-[24px] border border-zinc-200 dark:border-zinc-800 p-8 hover:border-zinc-300 dark:hover:border-zinc-700 bg-zinc-50 dark:bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-900/50 transition-all duration-300 relative overflow-hidden"
+              className="glass-strong group block rounded-[24px] border border-zinc-200 dark:border-zinc-800 p-8 hover:border-zinc-300 dark:hover:border-zinc-700 bg-zinc-50 dark:bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-900/50 transition-all duration-200 relative overflow-hidden"
             >
               <div className="absolute right-0 top-0 w-32 h-32 rounded-full blur-[80px] opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity" style={{ background: nextProject.accent }} />
               
@@ -305,7 +305,7 @@ const GroundCaseStudy = () => {
                 <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-zinc-500">Up next</span>
                 <h3 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-white group-hover:translate-x-1 transition-transform inline-flex items-center gap-2">
                   {nextProject.title}
-                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
                 </h3>
                 <p className="text-xs text-zinc-600 dark:text-zinc-400 font-light mt-0.5">{nextProject.tagline}</p>
               </div>

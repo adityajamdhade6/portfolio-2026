@@ -60,7 +60,7 @@ const Work = () => {
       className="min-h-screen bg-background"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.3 }}
     >
       <Header />
 
@@ -73,7 +73,7 @@ const Work = () => {
               className="lg:col-span-3 space-y-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
             >
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight">
                 MY WORK.
@@ -101,7 +101,7 @@ const Work = () => {
               className="lg:col-span-9"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {currentProjects.map((project, index) => (
@@ -109,17 +109,17 @@ const Work = () => {
                     key={project.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
                     className="group"
                   >
                     {activeCategory === "case-studies" && "link" in project ? (
                       <Link to={project.link} className="block">
-                        <div className="border border-border/50 overflow-hidden transition-all duration-300 hover:border-border">
+                        <div className="border border-border/50 overflow-hidden transition-all duration-200 hover:border-border">
                           <div className="overflow-hidden">
                             <img
                               src={project.image}
                               alt={project.title}
-                              className="w-full h-auto object-contain bg-zinc-900 transition-transform duration-500 group-hover:scale-105"
+                              className="w-full h-auto object-contain bg-zinc-900 transition-transform duration-300 group-hover:scale-105"
                             />
                           </div>
                           <div className="p-4 space-y-2">
@@ -129,7 +129,7 @@ const Work = () => {
                             <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-wide">
                               {project.category}
                             </p>
-                            <button className="w-full mt-3 border border-foreground/20 py-2 text-center text-[10px] tracking-[0.15em] font-mono uppercase hover:bg-foreground hover:text-background transition-colors duration-300">
+                            <button className="w-full mt-3 border border-foreground/20 py-2 text-center text-[10px] tracking-[0.15em] font-mono uppercase hover:bg-foreground hover:text-background transition-colors duration-200">
                               VIEW IN DETAIL
                             </button>
                           </div>
@@ -141,7 +141,7 @@ const Work = () => {
                           <img
                             src={project.image}
                             alt={project.title}
-                            className="w-full h-auto object-contain bg-zinc-900 transition-transform duration-500 group-hover:scale-105"
+                            className="w-full h-auto object-contain bg-zinc-900 transition-transform duration-300 group-hover:scale-105"
                           />
                         </div>
                         <div className="p-4 space-y-2">
@@ -166,7 +166,7 @@ const Work = () => {
           className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 mt-20 md:mt-28"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6">
             <div className="lg:col-span-3">

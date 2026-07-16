@@ -115,7 +115,7 @@ const About = () => {
             className="space-y-4 mb-16"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
           >
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--brand)]">
               /about · aditya jamdhade
@@ -156,7 +156,7 @@ const About = () => {
                       initial={{ opacity: 0, y: 15 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: idx * 0.05 }}
+                      transition={{ duration: 0.3, delay: idx * 0.05 }}
                     >
                       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                         <h3 className="text-base font-semibold text-[var(--ink)]">

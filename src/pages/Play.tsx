@@ -88,7 +88,7 @@ const Play = () => {
             <motion.p 
               variants={{
                 hidden: { opacity: 0, y: 15 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" } }
               }}
               className="glass inline-flex items-center gap-2.5 rounded-full px-3.5 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-neutral-300"
             >
@@ -102,7 +102,7 @@ const Play = () => {
             <motion.h1 
               variants={{
                 hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } }
               }}
               className="font-sans font-extrabold text-[clamp(2.5rem,8.5vw,5.5rem)] leading-[0.95] tracking-tighter text-white mt-6"
             >
@@ -113,7 +113,7 @@ const Play = () => {
             <motion.p 
               variants={{
                 hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } }
               }}
               className="mt-8 max-w-xl text-base leading-relaxed text-zinc-400 md:text-lg"
             >
@@ -124,7 +124,7 @@ const Play = () => {
             <motion.div 
               variants={{
                 hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } }
               }}
               className="mt-10 flex flex-wrap gap-3"
             >
@@ -207,7 +207,7 @@ const Play = () => {
           <motion.div 
             variants={{
               hidden: { opacity: 0, scale: 0.95, y: 20 },
-              visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 1, 0.5, 1] } }
+              visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 1, 0.5, 1] } }
             }}
             className="relative"
           >
@@ -300,11 +300,11 @@ const Play = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
+                transition={{ duration: 0.35, ease: [0.25, 1, 0.5, 1] }}
                 className={`group relative flex flex-col ${index % 2 === 1 ? 'md:mt-24' : ''}`}
               >
                 <div 
-                  className="relative w-full overflow-hidden rounded-[24px] border border-zinc-800 transition-all duration-500 cursor-zoom-in"
+                  className="relative w-full overflow-hidden rounded-[24px] border border-zinc-800 transition-all duration-300 cursor-zoom-in"
                   style={{ backgroundColor: project.bg }}
                   onClick={() => setSelectedImage(project.image)}
                 >
@@ -316,10 +316,10 @@ const Play = () => {
                       loop 
                       muted 
                       playsInline 
-                      className="block w-full h-auto group-hover:scale-[1.02] transition-transform duration-500" 
+                      className="block w-full h-auto group-hover:scale-[1.02] transition-transform duration-300" 
                     />
                   ) : (
-                    <img src={project.image} alt={project.title} loading="lazy" className="block w-full h-auto group-hover:scale-[1.02] transition-transform duration-500" />
+                    <img src={project.image} alt={project.title} loading="lazy" className="block w-full h-auto group-hover:scale-[1.02] transition-transform duration-300" />
                   )}
                   <span className="pointer-events-none absolute inset-0 rounded-[24px] ring-1 ring-inset ring-white/10" />
                 </div>
@@ -382,7 +382,7 @@ const Play = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3 }}
       >
         <div className="mx-auto max-w-5xl flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
           <div>

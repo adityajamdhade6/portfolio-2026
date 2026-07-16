@@ -292,7 +292,7 @@ const Ground = () => {
             <motion.p 
               variants={{
                 hidden: { opacity: 0, y: 15 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" } }
               }}
               className="glass inline-flex items-center gap-2.5 rounded-full px-3.5 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-[var(--ink-base)]"
             >
@@ -307,7 +307,7 @@ const Ground = () => {
             <motion.h1 
               variants={{
                 hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } }
               }}
               className="hero-word text-[clamp(2.5rem,8vw,6.5rem)] text-[var(--foreground)] mt-6"
             >
@@ -318,7 +318,7 @@ const Ground = () => {
             <motion.p 
               variants={{
                 hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } }
               }}
               className="mt-8 max-w-xl text-base leading-relaxed text-[var(--ink-base)] md:text-lg"
             >
@@ -329,7 +329,7 @@ const Ground = () => {
             <motion.div 
               variants={{
                 hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } }
               }}
               className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4 border-t border-[var(--line-strong)] pt-6 w-full"
             >
@@ -356,7 +356,7 @@ const Ground = () => {
           <motion.div 
             variants={{
               hidden: { opacity: 0, scale: 0.95, y: 20 },
-              visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 1, 0.5, 1] } }
+              visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 1, 0.5, 1] } }
             }}
             className="relative"
           >
@@ -413,8 +413,8 @@ const Ground = () => {
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.55, ease: [0.25, 1, 0.5, 1], delay: projIdx * 0.04 }}
-                className="group relative flex flex-col transition-all duration-300 hover:-translate-y-2"
+                transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1], delay: projIdx * 0.02 }}
+                className="group relative flex flex-col transition-all duration-200 hover:-translate-y-2"
                 style={{
                   filter: "drop-shadow(0 0 0 transparent)",
                 }}
@@ -429,14 +429,14 @@ const Ground = () => {
                       src={proj.video} 
                       poster={proj.image}
                       autoPlay loop muted playsInline 
-                      className="absolute inset-0 h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-[1.03]" 
+                      className="absolute inset-0 h-full w-full object-contain p-3 transition-transform duration-200 group-hover:scale-[1.03]" 
                     />
                   ) : (
                     <img 
                       src={proj.image} 
                       alt={proj.title} 
                       loading="lazy" 
-                      className="absolute inset-0 h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-[1.03]" 
+                      className="absolute inset-0 h-full w-full object-contain p-3 transition-transform duration-200 group-hover:scale-[1.03]" 
                     />
                   )}
 
@@ -506,7 +506,7 @@ const Ground = () => {
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.5, delay: index * 0.07, ease: "easeOut" }}
+                transition={{ duration: 0.3, delay: index * 0.07, ease: "easeOut" }}
                 className="glass relative flex flex-col rounded-2xl p-6"
               >
                 <div className="mb-3 flex items-center justify-between">
@@ -527,7 +527,7 @@ const Ground = () => {
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-40px" }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.35, ease: "easeOut" }}
         className="relative px-4 pb-16 sm:px-6 sm:pb-24"
       >
         <div className="glass-strong mx-auto flex max-w-6xl flex-col items-start gap-6 rounded-[24px] p-6 sm:rounded-[28px] sm:p-10 md:flex-row md:items-center md:justify-between border border-[var(--line-strong)]">
@@ -665,7 +665,7 @@ const Ground = () => {
             href="mailto:adityajamdhade6@gmail.com" 
             className="group inline-flex items-center gap-2 rounded-full bg-[var(--foreground)] px-6 py-3 text-sm font-semibold text-[var(--background)] transition-transform hover:-translate-y-0.5"
           >
-            Email me <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-0.5">→</span>
+            Email me <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
           </a>
         </div>
         <p className="relative z-10 mt-10 max-w-md text-sm text-[var(--ink-base)]">
