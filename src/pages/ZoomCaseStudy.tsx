@@ -13,12 +13,7 @@ const ZoomCaseStudy = ({ nextProject }: { nextProject?: any }) => {
 
   // Full-width image sections from Behance
   const behanceImages = [
-    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f8806a232014615.6895c46a6201d.png",
-    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8931cf232014615.6893c00db04c0.png",
-    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/735e10232014615.6895285140348.png",
-    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8cf4c5232014615.6893c00dafc07.png",
-    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/c390d1232014615.6895d18518466.png",
-    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/3fe2a6232014615.6895a46f1b401.png",
+    "https://mir-s3-cdn-cf.behance.net/project_modules/1400/615710232014615.6999763181ee8.png",
   ];
 
   useEffect(() => {
@@ -91,7 +86,7 @@ const ZoomCaseStudy = ({ nextProject }: { nextProject?: any }) => {
 
         {/* Full-Width Image Gallery - Behance Style */}
         <div className="space-y-0 -mx-6 sm:-mx-10 md:-mx-12">
-          {behanceImages.slice(1).map((image, index) => (
+          {behanceImages.map((image, index) => (
             <motion.div
               key={index}
               className="w-full"
