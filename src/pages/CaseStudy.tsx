@@ -659,6 +659,9 @@ const CaseStudy = ({ nextProject }: { nextProject?: any }) => {
               </Link>
             </section>
           )}
+          
+          {/* Spacer to prevent Safari bottom clipping */}
+          <div className="h-6 sm:h-12 w-full shrink-0"></div>
         </div>
       </motion.div>
     </div>

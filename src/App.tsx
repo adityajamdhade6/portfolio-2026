@@ -17,6 +17,7 @@ import CaseStudy from "./pages/CaseStudy";
 import NotFound from "./pages/NotFound";
 import { GhostCompanion, GhostType } from "@/components/GhostCompanion";
 import { CustomCursor } from "@/components/CustomCursor";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -50,9 +51,9 @@ const App = () => {
   // Premium Smooth Scrolling (Vanilla Lenis is much safer than the React wrapper)
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 0.8,
+      duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      touchMultiplier: 2.5,
+      touchMultiplier: 2,
     });
     
     let rafId: number;
@@ -75,6 +76,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <AnimatedRoutes activeGhost={activeGhost} setActiveGhost={setActiveGhost} />
           {/* Global Ghost Companion */}
           <GhostCompanion type={activeGhost} />
