@@ -5,6 +5,11 @@ export function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    // Ignore modal routes (e.g. /ground/:id) so we don't reset the grid scroll position when opening a case study
+    if (pathname.startsWith('/ground/') && pathname.split('/').length > 2) {
+      return;
+    }
+    
     window.scrollTo({
       top: 0,
       left: 0,

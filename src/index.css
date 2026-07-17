@@ -316,10 +316,14 @@
 
   .ghost-hint-bob {
     animation: bob 3s ease-in-out infinite;
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   .ghost-accessory-float {
     animation: bob 3.2s ease-in-out infinite;
+    will-change: transform;
+    transform: translateZ(0);
   }
 }
 

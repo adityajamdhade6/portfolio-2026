@@ -167,11 +167,12 @@ const CaseStudy = ({ nextProject }: { nextProject?: any }) => {
               <p className="text-sm md:text-base leading-[1.8] text-muted-foreground font-light max-w-3xl">
                 To better understand user preferences and behaviors, we analyzed survey data and created charts. These visuals help us identify key trends and make data-driven decisions for Nurture.
               </p>
-              <div className="overflow-hidden rounded-sm mt-8">
+              <div className="overflow-hidden rounded-sm mt-8 bg-zinc-100/50 dark:bg-zinc-900/50 min-h-[200px]">
                 <img
                   src="https://framerusercontent.com/images/UHbMVILgvOBoJqvzB8LOyKRE.png"
                   alt="Quantitative Research Charts"
                   className="w-full h-auto"
+                  loading="lazy"
                 />
               </div>
             </motion.div>
@@ -188,11 +189,12 @@ const CaseStudy = ({ nextProject }: { nextProject?: any }) => {
               <p className="text-sm md:text-base leading-[1.8] text-muted-foreground font-light max-w-3xl">
                 Before diving into design, we needed to understand what was already out there. We analyzed 5 competitors to identify gaps and opportunities.
               </p>
-              <div className="overflow-hidden rounded-sm mt-8">
+              <div className="overflow-hidden rounded-sm mt-8 bg-zinc-100/50 dark:bg-zinc-900/50 min-h-[200px]">
                 <img
-                  src="https://framerusercontent.com/images/E5eKZrDhWZnCrzU90a59QMRC0k.png"
-                  alt="Competitor Analysis"
+                  src="https://framerusercontent.com/images/154Ff160r8oX2sJvE9nQO0yM.png"
+                  alt="Competitor Analysis Board"
                   className="w-full h-auto"
+                  loading="lazy"
                 />
               </div>
             </motion.div>

@@ -24,9 +24,12 @@ const queryClient = new QueryClient();
 const AnimatedRoutes = ({ activeGhost, setActiveGhost }: { activeGhost: GhostType, setActiveGhost: (t: GhostType) => void }) => {
   const location = useLocation();
   
+  // Use the top-level path segment as the key so nested modals (like /ground/:id) don't unmount the parent page
+  const pageKey = location.pathname.split('/')[1] || "/";
+
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
+      <Routes location={location} key={pageKey}>
         <Route 
           path="/" 
           element={<Index activeGhost={activeGhost} onSelectGhost={setActiveGhost} />} 
@@ -48,12 +51,14 @@ const AnimatedRoutes = ({ activeGhost, setActiveGhost }: { activeGhost: GhostTyp
 const App = () => {
   const [activeGhost, setActiveGhost] = useState<GhostType>("boo");
 
-  // Premium Smooth Scrolling (Vanilla Lenis is much safer than the React wrapper)
+  // Premium Smooth Scrolling
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       touchMultiplier: 2,
+      wheelMultiplier: 1.2,
+      syncTouch: true,
     });
     
     let rafId: number;
